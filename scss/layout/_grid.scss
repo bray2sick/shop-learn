@@ -1,0 +1,8 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.row {
+  @include grid-row;
+
+  @include grid-column($col-count);
+}

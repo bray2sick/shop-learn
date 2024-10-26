@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@mixin grid-row {
+  margin: 0 auto;
+  padding: math.div(10px, 2);
+  justify-content: center;
+}
+
+@mixin grid-column($col-count) {
+  @for $i from 1 through $col-count {
+    .col-#{$i} {
+      flex: 0 0 #{math.div(100%, $col-count) * $i};
+      padding: math.div(10px, 2);
+    }
+  }
+}
